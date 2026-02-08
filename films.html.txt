@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Favorite Comedy Movies</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        h2 {
+            text-align: center;
+        }
+        table {
+            width: 50%;
+            margin: auto;
+            border-spacing: 8px;
+            border-top: 6px dotted purple;
+            border-bottom: 4px dashed green;
+        }
+        th, td {
+            border: 5px solid blue;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+<h2>My Favorite Comedy Movies</h2>
+<table>
+
+<tr>
+    <th class="head1">Film Name</th>
+    <th class="head2">Year</th>
+    <th class="head3">Leading Actress</th>
+    <th class="head4">Leading Actor</th>
+</tr>
+
+<tr>
+    <td>Home Alone</td>
+    <td>1990</td>
+    <td>Catherine O'Hara</td>
+    <td>Macaulay Culkin</td>
+</tr>
+
+<tr>
+    <td>The Mask</td>
+    <td>1994</td>
+    <td>Cameron Diaz</td>
+    <td>Jim Carrey</td>
+</tr>
+
+<tr>
+    <td>Rush Hour</td>
+    <td>1998</td>
+    <td>Elizabeth Peña</td>
+    <td>Jackie Chan</td>
+</tr>
+
+<tr>
+    <td>Johnny English</td>
+    <td>2003</td>
+    <td>Natalie Imbruglia</td>
+    <td>Rowan Atkinson</td>
+</tr>
+
+<tr>
+    <td>Deadpool</td>
+    <td>2016</td>
+    <td>Morena Baccarin</td>
+    <td>Ryan Reynolds</td>
+</tr>
+
+</table>
+
+</body>
+</html>
