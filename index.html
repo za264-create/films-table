@@ -1,73 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My Favorite Comedy Movies</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        h2 {
-            text-align: center;
-        }
-        table {
-            width: 50%;
-            margin: auto;
-            border-spacing: 8px;
-            border-top: 6px dotted purple;
-            border-bottom: 4px dashed green;
-        }
-        th, td {
-            border: 5px solid blue;
-            text-align: center;
-            padding: 10px;
-        }
-    </style>
+    <title>UCID Validation Form</title>
+    <script>
+        function validateUCID() {
+            
+            let ucid = document.getElementById("ucid").value;
+
+            let pattern = /^[A-Za-z]+[0-9]{0,3}$/;
+                          
+            let validUCIDs = ["za264", "js123", "abc", "john1", "smith99"];
+
+            let result = document.getElementById("result");
+  
+            if (pattern.test(ucid)) {
+              
+                if (validUCIDs.includes(ucid)) {
+                   result.innerHTML = "VALID UCID FORMAT AND UCID FOUND";
+                }
+                else {
+                   result.innerHTML = "VALID UCID FORMAT BUT INVALID UCID";
+                }
+             }
+             else {
+                 result.innerHTML = "UCID DOES NOT CONFORM TO VALID FORMAT";
+             }
+         }
+     </script>
 </head>
 <body>
-<h2>My Favorite Comedy Movies</h2>
-<table>
 
-<tr>
-    <th class="head1">Film Name</th>
-    <th class="head2">Year</th>
-    <th class="head3">Leading Actress</th>
-    <th class="head4">Leading Actor</th>
-</tr>
+    <h2>UCID Validation Form</h2>
+    
+    <form onsubmit="validateUCID(); return false;">
 
-<tr>
-    <td>Home Alone</td>
-    <td>1990</td>
-    <td>Catherine O'Hara</td>
-    <td>Macaulay Culkin</td>
-</tr>
+        <label for="ucid">Enter UCID:</label><br><br>
+        <input
+            type="text"
+            id="ucid"
+            name="ucid"
+            placeholder="Enter your UCID"
+            title="UCID must be letters followed by 0 to 3 digits"
+        >
 
-<tr>
-    <td>The Mask</td>
-    <td>1994</td>
-    <td>Cameron Diaz</td>
-    <td>Jim Carrey</td>
-</tr>
+        <br><br>
 
-<tr>
-    <td>Rush Hour</td>
-    <td>1998</td>
-    <td>Elizabeth Peña</td>
-    <td>Jackie Chan</td>
-</tr>
-
-<tr>
-    <td>Johnny English</td>
-    <td>2003</td>
-    <td>Natalie Imbruglia</td>
-    <td>Rowan Atkinson</td>
-</tr>
-
-<tr>
-    <td>Deadpool</td>
-    <td>2016</td>
-    <td>Morena Baccarin</td>
-    <td>Ryan Reynolds</td>
-</tr>
-
-</table>
+        <input type="submit" value="Submit">
+ 
+     </form>
+     <p id="result"></p>
 
 </body>
 </html>
+        
+
