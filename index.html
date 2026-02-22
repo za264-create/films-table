@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Password Toggle Form</title>
+    <script>
+ 
+         function togglePassword() {
+             let passBox = document.getElementById("password");
+
+             if (passBox.type === "password") {
+                 passBox.type = "text";
+                 passBox.style.backgroundColor = "#ccffcc";
+             } else {
+ 
+                 passBox.type = "password";
+                 passBox.style.backgroundColor = "#ffffff";
+             }
+          }
+
+     </script>
+</head>
+<body>
+    <h2>Password Toggle Form</h2>
+ 
+    <form>
+        <label for="password">Enter Password:</label><br><br>
+
+        <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter your password"
+            title="Click the box to show or hide your password"
+            onclick="togglePassword()"
+        ><br><br>
+  
+        <small>Click inside the box to show or hide the password.</small>
+    </form>
+</body>
+</html>
