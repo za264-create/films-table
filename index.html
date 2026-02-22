@@ -1,56 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>UCID Validation Form</title>
+    <title>Password Toggle Form</title> 
+
     <script>
-        function validateUCID() {
-            
-            let ucid = document.getElementById("ucid").value;
+        function togglePassword() {
 
-            let pattern = /^[A-Za-z]+[0-9]{0,3}$/;
-                          
-            let validUCIDs = ["za264", "js123", "abc", "john1", "smith99"];
+            let passBox = document.getElementById("password");
 
-            let result = document.getElementById("result");
-  
-            if (pattern.test(ucid)) {
-              
-                if (validUCIDs.includes(ucid)) {
-                   result.innerHTML = "VALID UCID FORMAT AND UCID FOUND";
-                }
-                else {
-                   result.innerHTML = "VALID UCID FORMAT BUT INVALID UCID";
-                }
-             }
-             else {
-                 result.innerHTML = "UCID DOES NOT CONFORM TO VALID FORMAT";
-             }
-         }
+            if (passBox.type === "password") {
+                passBox.type = "text";
+                passBox.style.backgroundColor = "lightgreen";
+            }
+
+            else {
+                passBox.type = "password";
+                passBox.style.backgroundColor = "white";
+            }
+        }
+
      </script>
 </head>
+
 <body>
-
-    <h2>UCID Validation Form</h2>
-    
-    <form onsubmit="validateUCID(); return false;">
-
-        <label for="ucid">Enter UCID:</label><br><br>
-        <input
-            type="text"
-            id="ucid"
-            name="ucid"
-            placeholder="Enter your UCID"
-            title="UCID must be letters followed by 0 to 3 digits"
-        >
-
-        <br><br>
-
-        <input type="submit" value="Submit">
  
-     </form>
-     <p id="result"></p>
+    <h2>Password Toggle Form</h2>
+    
+    <form>
+        <label for="password">Enter Password:</label><br><br\
+        
+        <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter your password"
+            onclick="togglePassword()"
+        >
+        </form>
 
 </body>
-</html>
-        
+</html>        
 
+   
